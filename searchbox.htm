@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Job Search</title>
+    <style type="text/css">
+        <!--
+        #SEEKcontainer {
+            width: 300px;
+            height: 240px;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            *zoom: 1;
+            *display: inline;
+            border: 4px solid #DBDBDB;
+            border-radius: 12px;
+            -moz-border-radius: 12px;
+            -webkit-border-radius: 12px;
+            color: #fff;
+            font-family: Helvetica, Arial;
+            font-size: 11px;
+            background: url(http://www.seek.com.au/content/images/logos/logo-seek-onsite.png) 8px 186px no-repeat #0D3880;
+        }
+
+            #SEEKcontainer #SearchJobControl {
+                padding: 5px;
+            }
+
+            #SEEKcontainer input, #SEEKcontainer select {
+                width: 288px;
+                position: absolute;
+                left: 5px;
+                margin-top: 15px;
+                font-size: 12px;
+                font-family: Helvetica, Arial;
+            }
+
+            #SEEKcontainer label {
+                display: none;
+            }
+
+            #SEEKcontainer #header {
+                color: #fff;
+                padding-left: 2px;
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            #SEEKcontainer .disabled {
+                color: #777;
+            }
+
+            #SEEKcontainer #searchbutton {
+                position: absolute;
+                bottom: 8px;
+                right: 8px;
+            }
+
+                #SEEKcontainer #searchbutton a {
+                    width: 93px;
+                    height: 49px;
+                    display: block;
+                    background: url(http://www.seek.com.au/content/images/buttons/btn_onsite.png) no-repeat;
+                }
+
+            #SEEKcontainer #Keywords {
+                width: 282px;
+                top: 15px;
+            }
+
+            #SEEKcontainer #catindustry {
+                top: 40px;
+            }
+
+            #SEEKcontainer #catoccupation {
+                top: 63px;
+            }
+
+            #SEEKcontainer #catparentlocation {
+                top: 86px;
+            }
+
+            #SEEKcontainer #catchildlocation {
+                top: 109px;
+            }
+
+            #SEEKcontainer #catworktype {
+                top: 132px;
+            }
+        -->
+    </style>
+</head>
+<body>
+
+    <div id="SEEKcontainer">
+        <form name="layout" id="layout" action="">
+            <div id="SearchJobControl">Loading...</div>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var LimitLocationsList = ''; // leave empty for all but if you want to restrict use: new Array(0, 1206, 1209, 1225, 6058, 6251, 6263, 6317);
+        var LimitClassificationsList = ''; // leave empty for all but if you want to restrict use: new Array(0, 1200, 6251, 6304, 1203, 1204, 7019);
+
+        var target = 'blank';
+        var Settings = {
+            'SearchBoxTitle': 'SEEK Job Search',
+            // Define which of the search fields are to be included in this search box (remove fields not required & relevant css above)
+            'Show': 'keywords,classification,subclass,location,area,worktype',
+            // heights for classification, subclass, location, area, worktype, results from (in this order) 
+            'Heights': '1,1,1,1,1,1',
+            // 'muliple' select or blank for single select boxes
+            'Multiple': '',
+            // advertiser ID or group - to be appended to query string can be used from comefrom or tracking values also
+            'Advertiser': '',
+            // leave blank if background image being used instead
+            'ButtonText': ''
+        };
+        var MainSeekSiteAddress = 'http://jobs.seek.com.au';
+        function initPage() {
+            // To draw and where to attach (do not modify or remove)
+            drawSearchJobControl("SearchJobControl");
+        }
+        //]]>
+    </script>
+    <script type="text/javascript" src="http://www.seek.com.au/Scripts/Taxonomy/jobsearch.onsite.min.js"></script>
+</body>
+</html>
